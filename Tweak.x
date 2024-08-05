@@ -1,4 +1,3 @@
-#import <UIKit/UIKit.h>
 #import "AlderisColorPicker.h"
 
 //Change Notification Center Name
@@ -64,5 +63,19 @@
 
 -(double)minWidth{
     return (double)(45.8);
+}
+%end
+
+//Change swipe to unlock
+%hook CSTeachableMomentsContainerViewController
+-(void)_updateText:(id)arg1{
+	%orig(@"Tờ Rung ✌🏻");
+}
+%end
+
+//Change passcode text
+%hook SBUIPasscodeLockViewWithKeypad
+-(void)updateStatusText:(id)arg1 subtitle:(id)arg2 animated:(BOOL)arg3{
+	%orig(@"Xin cái Pass 😒", arg2, arg3);
 }
 %end

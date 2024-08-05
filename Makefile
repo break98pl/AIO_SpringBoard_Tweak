@@ -2,7 +2,7 @@ export ARCHS = arm64 arm64e
 export TARGET = iphone:clang:14.5:15.0
 INSTALL_TARGET_PROCESSES = SpringBoard
 export FINALPACKAGE=1
-export THEOS_DEVICE_IP=192.168.1.238
+export THEOS_DEVICE_IP=192.168.1.149
 
 include $(THEOS)/makefiles/common.mk
 
